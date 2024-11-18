@@ -1,0 +1,134 @@
+body {
+  background-image: linear-gradient(rgba(61, 62, 78, 0.7), rgba(88, 32, 18, 0.7)), url(../public/OnlineVoting.jpg);
+  background-position: center;
+  background-size: cover;
+} 
+.container {
+  display: flex;
+  flex-wrap: wrap;           
+  justify-content: space-between; 
+  align-items: center;       
+  width: 90%;               
+  gap: 5px;                 
+  padding: 30px;
+  margin-top: 2%;
+}
+
+.container h1 {
+  font-size: 20px;    
+}
+
+.text-encabezado {
+  font-size: 24px;
+  color: #f8f8f9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;           
+  width: 48%;
+  padding: 0px;  
+  box-sizing: border-box; 
+  transition: box-shadow 0.3s ease;       
+}
+
+.contenido{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  background: #ececec;
+  border: 3px solid rgba(22, 43, 112);
+}
+
+.text {
+  flex: 1; 
+  color: black;
+  text-align: center;
+}
+
+.image-button:hover {
+  opacity: 0.8;    
+} 
+
+.image-button:focus {
+  outline: none;  
+}
+
+/*Nuevoooo*/
+.images {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  height: 130px;     
+  border: 3px solid rgba(22, 43, 112); 
+  margin-left: 10px;
+  background: #ececec;
+}
+
+.image-button {
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.numLista {
+  font-size: 25px;
+  width: 110px;
+  border-left: solid rgb(22, 43, 112) 3px; 
+  height: 130px;
+  text-align: center;
+}
+
+.numLista h1{
+  margin-top: 45px;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+.image.selected::before,
+.image.selected::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9rem;
+  height: 0.5rem;
+  background-color: green;
+  transform-origin: center;
+}
+
+.image.selected::before {
+  transform: translate(-50%, -50%) rotate(45deg) scaleX(0);
+  animation: linea1 1.0s forwards;
+}
+
+.image.selected::after {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+  animation: linea2 1.0s forwards 0.3s;
+}
+
+@keyframes linea1 {
+  to {
+      transform: translate(-50%, -50%) rotate(45deg) scaleX(1);
+  }
+}
+
+@keyframes linea2 {
+  to {
+      transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+  }
+}

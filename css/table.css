@@ -1,0 +1,61 @@
+
+.tabla-simulada {
+    width: 100%;
+}
+.cabecera, .fila {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.cabecera {
+    font-weight: bold;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+.celda {
+    flex: 1;
+    padding: 5px;
+    text-align: left;
+}
+.pagination-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    float: right;
+}
+.pagination-controls button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    
+}
+.fila {
+    padding: 10px;
+}
+
+.fila:nth-child(odd) {
+    background-color: white;
+}
+
+.fila:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+#search{
+    width: 250px;
+    margin-top: 25px;
+    float: right;
+}
